@@ -12,7 +12,7 @@ namespace EdeaWebApi.Controllers
 
 
     //[EnableCors("AllowOrigin")]
-    [EnableCors("OrdersPolicy")]
+    //[EnableCors("OrdersPolicy")]
     [Route("[controller]")]
     [ApiController]
     public class OrdersController : ControllerBase
@@ -39,9 +39,9 @@ namespace EdeaWebApi.Controllers
 
         #region Public methods
 
-        [EnableCors("OrdersPolicy")]
+        //[EnableCors("OrdersPolicy")]
         [HttpGet]
-        public List<Order> Get()
+        public List<Order> Get(int first, int rows)
         {
             return _dal.GetOrdersList();
         }

@@ -26,16 +26,7 @@ namespace EdeaWebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddCors(options =>
-            {
-                options.AddPolicy(name: "OrdersPolicy",
-                    builder =>
-                    {
-                        builder.WithOrigins("http://localhost:4200/")
-                                .WithMethods("PUT", "DELETE", "GET");
-                    });
-            });
+            services.AddCors();
 
             services.AddControllers();
             
@@ -51,11 +42,16 @@ namespace EdeaWebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
-
             app.UseRouting();
 
-            app.UseCors();
+            app.UseCors(builder => builder
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .SetIsOriginAllowed((host) => true)
+                .AllowCredentials()
+            );
+
+            app.UseHttpsRedirection();
 
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
@@ -63,7 +59,6 @@ namespace EdeaWebApi
                 endpoints.MapControllers();
             });
 
-           
         }
     }
 }
