@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edea.Entities", "Edea.Entit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edea.DAL", "Edea.DAL\Edea.DAL.csproj", "{6EC7EE7C-9119-40F0-B9DC-8C8D3DA502CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edea.BL", "Edea.BL\Edea.BL.csproj", "{FB0252C7-5169-4C4F-9680-152715AD794C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6EC7EE7C-9119-40F0-B9DC-8C8D3DA502CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EC7EE7C-9119-40F0-B9DC-8C8D3DA502CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EC7EE7C-9119-40F0-B9DC-8C8D3DA502CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB0252C7-5169-4C4F-9680-152715AD794C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB0252C7-5169-4C4F-9680-152715AD794C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB0252C7-5169-4C4F-9680-152715AD794C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB0252C7-5169-4C4F-9680-152715AD794C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

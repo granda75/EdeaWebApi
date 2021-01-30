@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Edea.BL\Edea.BL.csproj" />
     <ProjectReference Include="..\Edea.DAL\Edea.DAL.csproj" />
     <ProjectReference Include="..\Edea.Entities\Edea.Entities.csproj" />
   </ItemGroup>

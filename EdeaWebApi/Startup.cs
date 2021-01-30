@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Edea.BL;
 using Edea.DAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+
 
 namespace EdeaWebApi
 {
@@ -31,7 +26,8 @@ namespace EdeaWebApi
             services.AddControllers();
             
             string conString = Configuration.GetConnectionString("northWind");
-            services.AddScoped<IOrdersDal>(x=> new OrdersDal(conString));
+            services.AddScoped<IOrdersBL>(x => new OrdersBL(new OrdersDal(conString)));
+            //services.AddScoped<IOrdersDal>(x=> new OrdersDal(conString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
