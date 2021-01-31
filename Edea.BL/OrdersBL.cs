@@ -25,8 +25,8 @@ namespace Edea.BL
             OrdersData data = new OrdersData();
             data.OrdersList = _dal.GetOrdersList();
             data.TotalOrders = data.OrdersList.Count;
-            data.TotalShippingCost = data.OrdersList.Sum(l => l.Freight);
-            data.AverageShippingCost = data.OrdersList.Average(l => l.Freight);
+            //data.TotalShippingCost = data.OrdersList.Sum(l => l.ShippingCost);
+            //data.AverageShippingCost = data.OrdersList.Average(l => l.ShippingCost);
 
             return data;
         }

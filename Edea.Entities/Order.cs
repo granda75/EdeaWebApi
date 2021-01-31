@@ -10,6 +10,6 @@ namespace Edea.Entities
         public string ShipAddress { get; set; }
         public string ShipCity    { get; set; }
         public string ShipRegion  { get; set; }
-        public float Freight      { get; set; }
+        public float ShippingCost { get; set; }
     }
 }
